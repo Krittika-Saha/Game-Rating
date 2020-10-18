@@ -66,10 +66,17 @@ Game.find(function(err, games){
   };
 });
 
-Game.updateOne({_id: "5f8c5049bac9c3361c7ffbea"}, {name: "Life Is Strange"}, function(err){
+// Game.updateOne({_id: "5f8c5049bac9c3361c7ffbea"}, {name: "Life Is Strange"}, function(err){
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log("Updated object with id 5f8c5049bac9c3361c7ffbea successfully! Oof!");
+//   };
+// });
+Game.deleteOne({_id: "5f8c5049bac9c3361c7ffbea"}, function(err){
   if (err) {
     console.log(err);
   } else {
-    console.log("Updated object with id 5f8c5049bac9c3361c7ffbea successfully! Oof!");
-  }
+    console.log("Deleted object with id 5f8c5049bac9c3361c7ffbea successfully! Oof!");
+  };
 })
